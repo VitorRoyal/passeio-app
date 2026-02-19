@@ -1,0 +1,14 @@
+{
+  "categorias": [
+    {
+      "id": "1",
+      "nome": "Parques",
+      "descricao": "Locais ao ar livre com áreas verdes, trilhas e espaços para lazer."
+    },
+    {
+      "id": 2,
+      "nome": "teste",
+      "descricao": "teste"
+    }
+  ]
+}

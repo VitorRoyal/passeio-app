@@ -19,11 +19,18 @@ export class CategoriaComponent {
   }
 
   salvar(){
+    this.camposForm.markAllAsTouched();
+
     if(this.camposForm.valid){
       console.log(this.camposForm.value);
     } else {
       console.log('Formulário inválido');
     }
+  }
+
+  camposInvalidos(nomeCampo: string): boolean {
+    const campo = this.camposForm.get(nomeCampo);
+    return campo?.invalid && campo.touched || false;
   }
 
 }
