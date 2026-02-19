@@ -6,7 +6,12 @@
       "descricao": "Locais ao ar livre com áreas verdes, trilhas e espaços para lazer."
     },
     {
-      "id": 2,
+      "id": "472f",
+      "nome": "Praias",
+      "descricao": "Lugares paradisiacos"
+    },
+    {
+      "id": "d653",
       "nome": "teste",
       "descricao": "teste"
     }
