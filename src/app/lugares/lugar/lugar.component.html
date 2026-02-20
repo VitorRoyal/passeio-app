@@ -1,0 +1,51 @@
+<div class="p-6 max-w-lg mx-auto bg-white shadow-lg rounded-lg mt-6">
+    <h2 class="text-2xl font-semibold text-gray-700 mg-4">Novo Lugar</h2>
+    <hr/>
+
+    <form id="lugarForm" [formGroup]="camposForm" (ngSubmit)="salvarFormulario()">
+        <div class="mb-4">
+            <label for="nome" class="block text-gray-700 font-medium mb-2">Nome do Lugar:</label>
+            <input type="text" 
+            id="nome" 
+            formControlName="nome" 
+            placeholder="Ex: Praia do forte, Restaurante da Maria"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400">
+        </div>
+
+        <div class="mb-4">
+            <label for="categoria" class="block text-gray-700 font-medium mb-2">Categoria:</label>
+            <select id="categoria" formControlName="categoria" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400">
+                <option value="">Selecione uma categoria</option>
+                <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nome }}</option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="localizacao" class="block text-gray-700 font-medium mb-2">Localização:</label>
+            <input type="text" 
+            id="localizacao" 
+            formControlName="localizacao" 
+            placeholder="Ex: Rua das Flores, 123"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400">
+        </div>
+
+        <div class="mb-4">
+            <label for="urlFoto" class="block text-gray-700 font-medium mb-2">URL da Foto:</label>
+            <input type="text" 
+            id="urlFoto" 
+            formControlName="urlFoto" 
+            placeholder="Ex: https://exemplo.com/foto.jpg"
+            class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400">
+        </div>
+
+        <div class="mb-4">
+            <label for="avaliacao" class="block text-gray-700 font-medium mb-2">Avaliação (1 a 5 estrelas):</label>
+            <select id="avaliacao" formControlName="avaliacao" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400">
+                <option value="">Selecione uma avaliação</option>
+                <option *ngFor="let i of [1,2,3,4,5]" [value]="i">{{ i }} estrelas</option>
+            </select>
+        </div>
+
+        <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200">Cadastrar Lugar</button>
+    </form>
+</div>
