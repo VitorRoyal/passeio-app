@@ -10,6 +10,7 @@
             formControlName="nome" 
             placeholder="Ex: Praia do forte, Restaurante da Maria"
             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400">
+            <span class="text-red-500 text-sm" *ngIf="camposInvalidos('nome')">Campo Obrigatório</span>
         </div>
 
         <div class="mb-4">
@@ -18,6 +19,7 @@
                 <option value="">Selecione uma categoria</option>
                 <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nome }}</option>
             </select>
+            <span class="text-red-500 text-sm" *ngIf="camposInvalidos('categoria')">Campo Obrigatório</span>
         </div>
 
         <div class="mb-4">
@@ -27,6 +29,7 @@
             formControlName="localizacao" 
             placeholder="Ex: Rua das Flores, 123"
             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400">
+            <span class="text-red-500 text-sm" *ngIf="camposInvalidos('localizacao')">Campo Obrigatório</span>
         </div>
 
         <div class="mb-4">
@@ -36,6 +39,7 @@
             formControlName="urlFoto" 
             placeholder="Ex: https://exemplo.com/foto.jpg"
             class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400">
+            <span class="text-red-500 text-sm" *ngIf="camposInvalidos('urlFoto')">Campo Obrigatório</span>
         </div>
 
         <div class="mb-4">
@@ -44,6 +48,7 @@
                 <option value="">Selecione uma avaliação</option>
                 <option *ngFor="let i of [1,2,3,4,5]" [value]="i">{{ i }} estrelas</option>
             </select>
+            <span class="text-red-500 text-sm" *ngIf="camposInvalidos('avaliacao')">Campo Obrigatório</span>
         </div>
 
         <button type="submit" class="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-200">Cadastrar Lugar</button>

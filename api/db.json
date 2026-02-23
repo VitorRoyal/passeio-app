@@ -15,5 +15,43 @@
       "nome": "teste",
       "descricao": "teste"
     }
+  ],
+  "lugares": [
+    {
+      "id": "1",
+      "nome": "Parque Ibirapuera",
+      "descricao": "Um dos parques mais famosos de São Paulo, com áreas verdes, lagos e museus.",
+      "categoriaId": "1"
+    },
+    {
+      "id": "2",
+      "nome": "Praia de Copacabana",
+      "descricao": "Uma das praias mais icônicas do Rio de Janeiro, conhecida por sua beleza e agitação.",
+      "categoriaId": "472f"
+    },
+    {
+      "id": "da5e",
+      "nome": "Praia Grande",
+      "categoria": "472f",
+      "localizacao": "São Paulo, Praia grande",
+      "urlFoto": "teste",
+      "avaliacao": "1"
+    },
+    {
+      "id": "96b6",
+      "nome": "Ibirapuera",
+      "categoria": "1",
+      "localizacao": "São Paulo, SP, BR",
+      "urlFoto": "https://www.saopauloinfoco.com.br/historia-do-parque-do-ibirapuera/",
+      "avaliacao": "5"
+    },
+    {
+      "id": "f9c9",
+      "nome": "Ibirapuera",
+      "categoria": "1",
+      "localizacao": "São Paulo, SP, BR",
+      "urlFoto": "https://www.saopauloinfoco.com.br/wp-content/uploads/2013/03/Parque-do-Ibirapuera_Cidade-de-S%C3%A3o-Paulo.jpg",
+      "avaliacao": "5"
+    }
   ]
 }
