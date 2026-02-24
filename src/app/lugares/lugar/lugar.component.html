@@ -17,7 +17,7 @@
             <label for="categoria" class="block text-gray-700 font-medium mb-2">Categoria:</label>
             <select id="categoria" formControlName="categoria" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-blue-400">
                 <option value="">Selecione uma categoria</option>
-                <option *ngFor="let categoria of categorias" [value]="categoria.id">{{ categoria.nome }}</option>
+                <option *ngFor="let categoria of categorias" [value]="categoria.nome">{{ categoria.nome }}</option>
             </select>
             <span class="text-red-500 text-sm" *ngIf="camposInvalidos('categoria')">Campo Obrigatório</span>
         </div>
