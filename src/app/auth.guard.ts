@@ -1,10 +1,10 @@
-import { Inject } from '@angular/core';
+import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthgoogleService } from './authgoogle.service';
 
 export const authGuard: CanActivateFn = (route, state) => {
-  const loginService: AuthgoogleService = Inject(AuthgoogleService);
-  const router: Router = Inject(Router);
+  const loginService: AuthgoogleService = inject(AuthgoogleService);
+  const router: Router = inject(Router);
 
   const isLoggedIn = loginService.getLoggedProfile();
 
